@@ -9,6 +9,7 @@
     "workspaces": [
         "packages/*"
     ],
+    "private": "true",
     "scripts": {
         "test": "lerna run test",
         "test:ui-core": "yarn test --scope ui-core"
