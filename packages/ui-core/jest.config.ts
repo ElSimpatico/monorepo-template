@@ -1,7 +1,7 @@
 import { Config } from '@jest/types';
 
 const jestConfig: Config.InitialOptions = {
-    roots: ['<rootDir>/tests'],
+    roots: ['<rootDir>/src/tests'],
     testMatch: [
         '**/__tests__/**/*.+(ts|tsx|js)',
         '**/?(*.)+(spec|test).+(ts|tsx|js)',
@@ -9,7 +9,7 @@ const jestConfig: Config.InitialOptions = {
     transform: {
         '^.+\\.(ts|tsx)$': 'ts-jest',
     },
-    setupFiles: ['<rootDir>/tests/enzyme-setup.ts'],
+    setupFiles: ['<rootDir>/src/tests/enzyme-setup.ts'],
 };
 
 export default jestConfig;

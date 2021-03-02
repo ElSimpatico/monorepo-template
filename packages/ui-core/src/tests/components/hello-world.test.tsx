@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
 
-import { HelloWorld } from '../../src/components';
+import { HelloWorld } from '../../components';
 
 describe('Hello world Component', () => {
     test('Should be render', () => {
