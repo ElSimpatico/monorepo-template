@@ -5,7 +5,8 @@
     "author": "Aaron <tiquismiquisss@gmail.com>",
     "homepage": "https://github.com/ElSimpatico/monorepo-test#readme",
     "license": "ISC",
-    "main": "lib/ui-core.js",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
     "directories": {
         "lib": "lib",
         "test": "__tests__"
@@ -19,7 +20,10 @@
     },
     "scripts": {
         "test": "jest --coverage",
-        "storybook": "start-storybook -p 9009 -c .storybook"
+        "storybook": "start-storybook -p 9009 -c .storybook",
+        "build:local": "rollup --config rollup/config.dev.js",
+        "build:dev": "rm -rf dist && build:local",
+        "build": "rm -rf dist && rollup --config rollup/config.pro.js"
     },
     "bugs": {
         "url": "https://github.com/ElSimpatico/monorepo-test/issues"
@@ -29,13 +33,19 @@
         "react-dom": "^17.0.1"
     },
     "dependencies": {
-        "@storybook/cli": "^6.1.20"
+        "@storybook/cli": "^6.1.20",
+        "rollup": "^2.40.0"
     },
     "devDependencies": {
+        "@rollup/plugin-commonjs": "^17.1.0",
+        "@rollup/plugin-node-resolve": "^11.2.0",
         "@storybook/addon-actions": "^6.1.20",
         "@storybook/addon-controls": "^6.1.20",
         "@storybook/addon-docs": "^6.1.20",
         "@storybook/addon-viewport": "^6.1.20",
-        "@storybook/react": "^6.1.20"
+        "@storybook/react": "^6.1.20",
+        "rollup-plugin-terser": "^7.0.2",
+        "rollup-plugin-typescript": "^1.0.1",
+        "rollup-plugin-typescript2": "^0.30.0"
     }
 }

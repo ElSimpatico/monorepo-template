@@ -1,4 +1,11 @@
 {
     "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "module": "ES2015",
+        "rootDir": "src",
+        "baseUrl": "./",
+        "declaration": true,
+        "declarationMap": true
+    },
     "include": ["./src"]
 }
