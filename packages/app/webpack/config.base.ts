@@ -18,13 +18,18 @@ const WebpackBase: Configuration = {
                 exclude: /node_modules/,
             },
             {
-                test: /.s[ac]ss$/,
+                test: /.(c|sa|sc)ss$/,
                 use: ['style-loader', 'css-loader', 'sass-loader'],
             },
         ],
     },
     resolve: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        alias: {
+            '@components': resolve(__dirname, '../src/components/'),
+            '@pages': resolve(__dirname, '../src/pages/'),
+            '@shared': resolve(__dirname, '../src/shared/'),
+        },
     },
     plugins: [
         new HtmlWebpackPlugin({

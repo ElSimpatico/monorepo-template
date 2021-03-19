@@ -1,7 +1,7 @@
-import { Configuration, HotModuleReplacementPlugin } from 'webpack';
+import { Configuration } from 'webpack';
 import { Configuration as DevServerConfiguration } from 'webpack-dev-server';
 import { merge } from 'webpack-merge';
-import WebpackBase from './webpack.base';
+import WebpackBase from './config.base';
 
 interface ConfigurationDev extends Configuration {
     devServer?: DevServerConfiguration;
@@ -9,11 +9,11 @@ interface ConfigurationDev extends Configuration {
 
 const configurationDev: ConfigurationDev = {
     mode: 'development',
-    plugins: [new HotModuleReplacementPlugin()],
     devServer: {
         historyApiFallback: true,
         hot: true,
         open: true,
+        port: 3000,
     },
 };
 

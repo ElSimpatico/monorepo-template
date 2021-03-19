@@ -1,7 +1,15 @@
 {
     "extends": "../../tsconfig.json",
     "compilerOptions": {
-        "typeRoots": ["../../node_modules/@types"]
+        "typeRoots": ["../../node_modules/@types"],
+        "baseUrl": "./",
+        "paths": {
+            "@pages/*": ["./src/pages/*"],
+            "@pages": ["./src/pages"],
+            "@shared/*": ["./src/shared/*"],
+            "@components/*": ["./src/components/*"],
+            "@components": ["./src/components"]
+        }
     },
     "include": ["./src"]
 }
