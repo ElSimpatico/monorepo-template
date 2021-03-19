@@ -3,7 +3,7 @@ import React, { ReactElement } from 'react';
 import { Meta } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
-import { HelloWorld, HelloWorldProps } from '../../components';
+import { HelloWorld, HelloWorldProps } from '@components';
 import mdx from './hello-world.mdx';
 
 export default {

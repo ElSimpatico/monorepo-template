@@ -6,7 +6,7 @@ import commonjs from '@rollup/plugin-commonjs';
 export default {
     input: resolve(__dirname, '../src/index.ts'),
     output: {
-        file: 'dist/index.js',
+        file: 'lib/index.js',
         format: 'es',
     },
     plugins: [

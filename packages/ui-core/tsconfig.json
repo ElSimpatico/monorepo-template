@@ -5,7 +5,11 @@
         "rootDir": "src",
         "baseUrl": "./",
         "declaration": true,
-        "declarationMap": true
+        "declarationMap": true,
+        "paths": {
+            "@components/*": ["./src/components/*"],
+            "@components": ["./src/components"]
+        }
     },
     "include": ["./src"]
 }

@@ -1,4 +1,4 @@
-import { CommonComponentProps } from '../common-component-props';
+import { CommonComponentProps } from '@components';
 
 export interface HelloWorldProps extends CommonComponentProps {
     /** Name of person to say hi*/
