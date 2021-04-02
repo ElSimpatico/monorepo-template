@@ -1,6 +1,11 @@
 import { CommonComponentProps } from '@components';
 
-export interface HelloWorldProps extends CommonComponentProps {
+export interface StyleProps {
+    /** Color text */
+    colorText?: string;
+}
+
+export interface HelloWorldProps extends CommonComponentProps, StyleProps {
     /** Name of person to say hi*/
     name?: string;
 

@@ -10,6 +10,10 @@ const jestConfig: Config.InitialOptions = {
         '^.+\\.(ts|tsx)$': 'ts-jest',
     },
     setupFiles: ['<rootDir>/src/tests/enzyme-setup.ts'],
+    moduleNameMapper: {
+        '\\.(css|less|sass|scss)$': '<rootDir>/src/tests/mocks/styles.ts',
+        '@components(.*)': '<rootDir>/src/components$1',
+    },
 };
 
 export default jestConfig;

@@ -1,7 +1,16 @@
-import { resolve } from 'path';
 import rollupTypescript from 'rollup-plugin-typescript2';
 import nodeResolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
+
+import rollupStyles from 'rollup-plugin-styles';
+
+import { resolve } from 'path';
+
+import PackageJSON from '../package.json';
+
+function getExternals() {
+    return [...Object.keys(PackageJSON.peerDependencies || {})];
+}
 
 export default {
     input: resolve(__dirname, '../src/index.ts'),
@@ -25,5 +34,7 @@ export default {
                 ],
             },
         }),
+        rollupStyles(),
     ],
+    external: getExternals(),
 };

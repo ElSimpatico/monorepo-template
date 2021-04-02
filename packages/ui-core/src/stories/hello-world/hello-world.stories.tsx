@@ -13,6 +13,11 @@ export default {
             page: mdx,
         },
     },
+    argTypes: {
+        colorText: {
+            control: 'color',
+        },
+    },
     component: HelloWorld,
 } as Meta;
 
