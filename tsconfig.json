@@ -8,7 +8,8 @@
         "noImplicitAny": true,
         "outDir": "dist",
         "jsx": "react",
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "allowJs": true
     },
     "exclude": ["node_modules", "lib", "dist"]
 }
