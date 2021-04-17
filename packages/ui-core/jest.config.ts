@@ -13,6 +13,8 @@ const jestConfig: Config.InitialOptions = {
     moduleNameMapper: {
         '\\.(css|less|sass|scss)$': '<rootDir>/src/tests/mocks/styles.ts',
         '@components(.*)': '<rootDir>/src/components$1',
+        '@themes(.*)': '<rootDir>/src/themes$1',
+        '@utils(.*)': '<rootDir>/src/utils$1',
     },
 };
 
