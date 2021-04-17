@@ -1,11 +1,12 @@
 import React from 'react';
-import { mount, ReactWrapper } from 'enzyme';
+import { ReactWrapper } from 'enzyme';
 
+import { MountWrappers } from '@utils/testing';
 import { HelloWorld } from '@components';
 
 describe('Hello world Component', () => {
     test('Should be render', () => {
-        const wrapper: ReactWrapper = mount(<HelloWorld />);
+        const wrapper: ReactWrapper = MountWrappers(<HelloWorld />);
         expect(wrapper.find('HelloWorld')).toHaveLength(1);
     });
 });

@@ -1,4 +1,6 @@
+import { Theme } from '@themes';
 import React, { ReactElement } from 'react';
+import { useTheme } from 'react-jss';
 
 import { HelloWorldProps } from './hello-world-props';
 import { useStyles } from './styles';
@@ -6,7 +8,8 @@ import { useStyles } from './styles';
 export function HelloWorld(
     props: HelloWorldProps,
 ): ReactElement<HelloWorldProps> {
-    const classes = useStyles({ colorText: props.colorText });
+    const theme = useTheme<Theme>();
+    const classes = useStyles({ ...props, theme });
 
     return (
         <div className={classes.wrapper} onClick={props.onClick}>
@@ -15,3 +18,7 @@ export function HelloWorld(
         </div>
     );
 }
+
+HelloWorld.defaultProps = {
+    colorText: '',
+};
