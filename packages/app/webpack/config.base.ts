@@ -29,6 +29,7 @@ const WebpackBase: Configuration = {
             '@components': resolve(__dirname, '../src/components/'),
             '@pages': resolve(__dirname, '../src/pages/'),
             '@shared': resolve(__dirname, '../src/shared/'),
+            '@utils': resolve(__dirname, '../src/utils/'),
         },
     },
     plugins: [

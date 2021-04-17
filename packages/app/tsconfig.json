@@ -8,7 +8,8 @@
             "@pages": ["./src/pages"],
             "@shared/*": ["./src/shared/*"],
             "@components/*": ["./src/components/*"],
-            "@components": ["./src/components"]
+            "@components": ["./src/components"],
+            "@utils/*": ["./src/utils/*"]
         }
     },
     "include": ["./src"]

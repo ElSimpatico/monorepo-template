@@ -14,6 +14,7 @@ const jestConfig: Config.InitialOptions = {
         '\\.(css|less|sass|scss)$': '<rootDir>/src/tests/mocks/styles.ts',
         '@components(.*)': '<rootDir>/src/components$1',
         '@pages(.*)': '<rootDir>/src/pages$1',
+        '@utils(.*)': '<rootDir>/src/utils$1',
         'ui-core(.*)': '<rootDir>../ui-core/lib$1',
     },
 };
