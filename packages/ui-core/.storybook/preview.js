@@ -1,4 +1,10 @@
 import { viewports, argTypes } from './parameters';
+import { withThemeProvider } from './decorators';
+import { theme } from './globals';
+
+export const globalTypes = {
+    theme,
+};
 
 export const parameters = {
     viewport: {
@@ -11,3 +17,5 @@ export const parameters = {
         ...argTypes,
     },
 };
+
+export const decorators = [withThemeProvider];
