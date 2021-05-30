@@ -16,6 +16,7 @@ export const parameters = {
     argTypes: {
         ...argTypes,
     },
+    layout: 'fullscreen',
 };
 
 export const decorators = [withThemeProvider];
