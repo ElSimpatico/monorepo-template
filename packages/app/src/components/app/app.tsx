@@ -6,7 +6,7 @@ import { ThemeProvider } from 'ui-core';
 
 import { ROUTES, Route as AppRoute } from '@shared/routes';
 
-export function App(): ReactElement<{}> {
+export function App(): ReactElement<any> {
     return (
         <ThemeProvider theme={'light'}>
             <BrowserRouter>
@@ -16,7 +16,9 @@ export function App(): ReactElement<{}> {
                             key={route.key}
                             path={route.path}
                             exact={route.path === '/'}
-                            render={(props) => <route.component {...props} />}
+                            render={(props: any): ReactElement => (
+                                <route.component {...props} />
+                            )}
                         ></Route>
                     ))}
                 </Switch>

@@ -20,7 +20,10 @@
     "scripts": {
         "start": "webpack serve --config webpack/config.dev.ts --progress",
         "build:dev": "webpack --config webpack/config.dev.ts",
-        "test": "jest --coverage"
+        "test": "jest --coverage",
+        "lint:sonar": "eslint src/ --ext .js,.jsx,.ts,.tsx --quiet --fix --format stylish --color",
+        "lint:sonar:report": "eslint src/ --ext .js,.jsx,.ts,.tsx --quiet --fix --format json --output-file reports/lintern/report.json",
+        "lint": "yarn lint:sonar & yarn lint:sonar:report"
     },
     "bugs": {
         "url": "https://github.com/ElSimpatico/monorepo-test/issues"

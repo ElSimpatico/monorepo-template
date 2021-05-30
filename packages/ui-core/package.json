@@ -23,7 +23,10 @@
         "storybook": "start-storybook -p 9009 -c .storybook",
         "build:local": "rollup --config rollup/config.dev.js",
         "build:dev": "rm -rf lib && yarn build:local",
-        "build": "rm -rf lib && rollup --config rollup/config.pro.js"
+        "build": "rm -rf lib && rollup --config rollup/config.pro.js",
+        "lint:sonar": "eslint src/ --ext .js,.jsx,.ts,.tsx --quiet --fix --format stylish --color",
+        "lint:sonar:report": "eslint src/ --ext .js,.jsx,.ts,.tsx --quiet --fix --format json --output-file reports/lintern/report.json",
+        "lint": "yarn lint:sonar & yarn lint:sonar:report"
     },
     "bugs": {
         "url": "https://github.com/ElSimpatico/monorepo-test/issues"

@@ -3,7 +3,7 @@ import { HelloWorld } from 'ui-core';
 
 import { useStyles } from './styles';
 
-export function Home(): ReactElement<{}> {
+export function Home(): ReactElement<any> {
     const classes = useStyles();
 
     return (
