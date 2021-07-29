@@ -1,0 +1,56 @@
+{
+    "name": "ui-core",
+    "version": "0.0.0",
+    "description": "UI Library",
+    "author": "Aaron <tiquismiquisss@gmail.com>",
+    "homepage": "https://github.com/ElSimpatico/monorepo-test#readme",
+    "license": "ISC",
+    "main": "lib/index.js",
+    "module": "lib/index.js",
+    "directories": {
+        "lib": "lib",
+        "test": "__tests__"
+    },
+    "files": [
+        "lib"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ElSimpatico/monorepo-test.git"
+    },
+    "scripts": {
+        "test": "jest --coverage",
+        "storybook": "start-storybook -p 9009 -c .storybook",
+        "build:local": "rollup --config rollup/config.dev.js",
+        "build:dev": "rm -rf lib && yarn build:local",
+        "build": "rm -rf lib && rollup --config rollup/config.pro.js",
+        "lint:sonar": "eslint src/ --ext .js,.jsx,.ts,.tsx --quiet --fix --format stylish --color",
+        "lint:sonar:report": "eslint src/ --ext .js,.jsx,.ts,.tsx --quiet --fix --format json --output-file reports/lintern/report.json",
+        "lint": "yarn lint:sonar & yarn lint:sonar:report"
+    },
+    "bugs": {
+        "url": "https://github.com/ElSimpatico/monorepo-test/issues"
+    },
+    "peerDependencies": {
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1"
+    },
+    "dependencies": {
+        "@storybook/cli": "^6.1.20",
+        "rollup": "^2.40.0"
+    },
+    "devDependencies": {
+        "@rollup/plugin-commonjs": "^17.1.0",
+        "@rollup/plugin-node-resolve": "^11.2.0",
+        "@storybook/addon-actions": "^6.1.20",
+        "@storybook/addon-controls": "^6.1.20",
+        "@storybook/addon-docs": "^6.1.20",
+        "@storybook/addon-toolbars": "^6.2.2",
+        "@storybook/addon-viewport": "^6.1.20",
+        "@storybook/react": "^6.1.20",
+        "rollup-plugin-styles": "^3.14.1",
+        "rollup-plugin-terser": "^7.0.2",
+        "rollup-plugin-typescript": "^1.0.1",
+        "rollup-plugin-typescript2": "^0.30.0"
+    }
+}

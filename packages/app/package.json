@@ -1,0 +1,50 @@
+{
+    "name": "app",
+    "version": "0.0.0",
+    "description": "> TODO: description",
+    "author": "Aaron <tiquismiquisss@gmail.com>",
+    "homepage": "https://github.com/ElSimpatico/monorepo-test#readme",
+    "license": "ISC",
+    "main": "lib/app.js",
+    "directories": {
+        "lib": "lib",
+        "test": "__tests__"
+    },
+    "files": [
+        "lib"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ElSimpatico/monorepo-test.git"
+    },
+    "scripts": {
+        "start": "webpack serve --config webpack/config.dev.ts --progress",
+        "build": "webpack --config webpack/config.prod.ts",
+        "build:analyze": "webpack --config webpack/config.prod.ts --analyze",
+        "build:dev": "webpack --config webpack/config.dev.ts",
+        "test": "jest --coverage",
+        "lint:sonar": "eslint src/ --ext .js,.jsx,.ts,.tsx --quiet --fix --format stylish --color",
+        "lint:sonar:report": "eslint src/ --ext .js,.jsx,.ts,.tsx --quiet --fix --format json --output-file reports/lintern/report.json",
+        "lint": "yarn lint:sonar & yarn lint:sonar:report"
+    },
+    "bugs": {
+        "url": "https://github.com/ElSimpatico/monorepo-test/issues"
+    },
+    "devDependencies": {
+        "@types/react-router": "^5.1.12",
+        "@types/react-router-dom": "^5.1.7",
+        "@types/webpack-dev-server": "^3.11.1",
+        "awesome-typescript-loader": "^5.2.1",
+        "html-webpack-plugin": "^5.2.0",
+        "webpack": "^5.24.2",
+        "webpack-bundle-analyzer": "^4.4.2",
+        "webpack-cli": "^4.5.0",
+        "webpack-dev-server": "^3.11.2",
+        "webpack-merge": "^5.7.3"
+    },
+    "dependencies": {
+        "react-router": "^5.2.0",
+        "react-router-dom": "^5.2.0",
+        "ui-core": "^0.0.0"
+    }
+}

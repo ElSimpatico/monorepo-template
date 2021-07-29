@@ -1,0 +1,15 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "module": "CommonJS",
+        "esModuleInterop": true,
+        "target": "ES6",
+        "moduleResolution": "node",
+        "noImplicitAny": true,
+        "outDir": "dist",
+        "jsx": "react",
+        "skipLibCheck": true,
+        "allowJs": true
+    },
+    "exclude": ["node_modules", "lib", "dist"]
+}
