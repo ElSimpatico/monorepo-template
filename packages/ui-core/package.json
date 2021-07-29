@@ -37,6 +37,7 @@
     },
     "dependencies": {
         "@storybook/cli": "^6.1.20",
+        "react-compound-slider": "^3.3.1",
         "rollup": "^2.40.0"
     },
     "devDependencies": {
