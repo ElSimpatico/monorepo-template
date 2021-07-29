@@ -12,6 +12,7 @@
     "private": "true",
     "scripts": {
         "postinstall": "yarn husky install",
+        "build": "lerna run build",
         "test": "lerna run test",
         "test:ui-core": "yarn test --scope ui-core",
         "lint": "lerna run lint"
