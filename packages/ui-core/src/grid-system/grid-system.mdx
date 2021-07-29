@@ -1,0 +1,51 @@
+import { Story, Props, ArgsTable } from '@storybook/addon-docs/blocks';
+
+# Grid System
+
+To enable grid system in our design system just we define grid values in
+theme object
+
+```ts
+// theme object
+...
+ grid: {
+        sMin: {
+            key: 's',
+            gridCols: 2,
+            gridGap: '16px',
+            margin: '16px',
+        },
+        mMin: {
+            key: 'm',
+            gridCols: 6,
+            gridGap: '32px',
+            margin: '32px',
+        },
+        lMin: {
+            key: 'l',
+            gridCols: 12,
+            gridGap: '32px',
+            margin: '32px',
+        },
+        xlMin: {
+            key: 'xl',
+            gridCols: 12,
+            gridGap: '32px',
+            margin: '32px',
+        },
+    },
+...
+```
+
+## Grid Properties
+
+| Name     |                    Description                     |
+| :------- | :------------------------------------------------: |
+| key      | Grid key to define colum class name (.col-{key}-1) |
+| gridCols |                    Colum number                    |
+| gridGap  |            Spacing gap between columns             |
+| margin   |    Lateral margins for _.grid-container_ class     |
+
+## Grid Example
+
+<Story id="design-grid-system--grid-system-default" />
